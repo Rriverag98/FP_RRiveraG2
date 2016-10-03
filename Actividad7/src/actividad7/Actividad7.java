@@ -34,4 +34,21 @@ public class Actividad7 {
         } while (opcion<0 || opcion>=4);
           return opcion;
     }
+    public static float calcularArea(int op){
+        float area;
+        switch (op){
+        case 1:
+            area=areaCuadrado();
+            break;
+        case 2:
+            area=areaCirculo();
+            break;
+        case 3:
+            area=areaTriangulo();
+            break;
+        default:
+            mensajeSalida();
+            break;
+    } return area;
+    }
 }
