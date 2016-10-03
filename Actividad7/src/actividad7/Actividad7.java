@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package actividad7;
-
+import java.util.*;
 /**
  *
  * @author Rodrigo
@@ -15,7 +15,23 @@ public class Actividad7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    System.out.println("La opcion elegida es: " + menú ());
     }
+   
     
+    public static int menú (){
+        Scanner teclado = new Scanner (System.in);
+        int opcion;
+        do{
+        System.out.println("**** Calculo de areas ****");
+        System.out.println("**** Menú: ****");
+        System.out.println("Intrudusca la opcion deseada:");
+        System.out.println("1. Area de cuadrados.");
+        System.out.println("2. Area de circulos.");
+        System.out.println("3. Area de triangulos.");
+        System.out.println("0. Salir.");
+        opcion=teclado.nextInt();
+        } while (opcion<0 || opcion>=4);
+          return opcion;
+    }
 }
