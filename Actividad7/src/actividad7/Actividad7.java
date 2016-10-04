@@ -15,20 +15,11 @@ public class Actividad7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("La opcion elegida es: " + menú ());
-        int a,b;
-        double r1;
-        double r2;
-        double r3;
-        final double Pi=3.14;
-        a=SolicitarMedidas("A");
-        b=SolicitarMedidas("B");
-        r1=calcularCuadrado (a,b);
-        r2=calcularCirculo (a,Pi);
-        r3=calcularTriangulo (a,b);
-        resultado1(a,b,r1);
-        resultado2(a,b,r2);
-        resultado3(a,b,r3);
+        int accion;
+        float resultado;
+        accion = menú();
+        resultado=calcularArea(accion);
+        System.out.println("El resultado de la operacion es: " + resultado);
     }
    
     
@@ -38,86 +29,66 @@ public class Actividad7 {
         do{
         System.out.println("**** Calculo de areas ****");
         System.out.println("**** Menú: ****");
-        System.out.println("Intrudusca la opcion deseada:");
+        System.out.println("Introdusca la opcion deseada:");
         System.out.println("1. Area de cuadrados.");
         System.out.println("2. Area de circulos.");
         System.out.println("3. Area de triangulos.");
         System.out.println("0. Salir.");
         opcion=teclado.nextInt();
-        } while (opcion<0 || opcion>=4);
+        } while (opcion<0 || opcion>3);
+        System.out.println("La opcion elegida es: " + opcion);
           return opcion;
     }
-    public static int SolicitarMedidas (String d){
+    public static float SolicitarMedidas (String d){
+        float dato;
         Scanner teclado = new Scanner (System.in);
-        int dato;
         System.out.println("Introduce el dato " + d);
-        dato= teclado.nextInt();
+        dato= teclado.nextFloat();
         return dato;
     }
     public static float calcularArea(int op){
-        float area;
+        float area = 0; //Si no tiene el "= 0" ,Dice que no se inicializa la variable
         switch (op){
         case 1:
             area=areaCuadrado();
-           
-            break;
+            return area;
         case 2:
             area=areaCirculo();
-           
-            break;
+            return area;
         case 3:
             area=areaTriangulo();
-          
-            break;
+            return area;
         default:
-            mensajeSalida();           
+            mensajeSalida();          
     } 
     return area;
   }
-    //Procesos
+    //Calculos
   public static float areaCuadrado(){
       float datos;
-      double SolicitarMedidas;
-      double calcularCuadrado;
-      double resultado1;
+      double a;
+      a=SolicitarMedidas("A");
+      datos = (float)Math.pow(a,2);
       return datos;
   }
    public static float areaCirculo(){
-      double SolicitarMedidas;
-      double calcularCuadrado;
-      double resultado2;
-      return datos;
+      float datos;
+      double a;
+      final double Pi=3.14;
+      a=SolicitarMedidas("A");
+      datos = (float) (Pi*Math.pow(a,2));
+      return datos; 
   }
     public static float areaTriangulo(){
-      double SolicitarMedidas;
-      double calcularCuadrado;
-      double resultado3;
+      float datos;
+      double a,b;
+      a=SolicitarMedidas("A");
+      b=SolicitarMedidas("B");
+      datos = (float)(a*b)/2;
       return datos;
-  }
-     public static void mensajeSalida(){
-      String Salida;
-  }
-    //Calculos
-  public static double calcularCuadrado(double dato1,double dato2){
-      return (dato1*dato2);
-  }
-  public static double calcularCirculo(double dato1,double Pi){
-      return Math.pow(dato1*Pi,2);
+  }   
+    public static void mensajeSalida(){
+      System.out.println("Gracias, esperamos que te sirviera el programa");
+      System.exit(0);
 }
-  public static double calcularTriangulo(double dato1,double dato2){
-      return (dato1*dato2)/2;
-}
-  //Resultados
-  public static void resultado1(double a,double b,double resultado){
-   System.out.println("El resultado de la operacion ("+a+"*"+b+") es " + resultado);   
-  }
-  public static void resultado2(double a,double Pi,double resultado){
-   System.out.println("El resultado de la operacion ("+Pi+"*"+a+")^2 es " + resultado);   
-  }
-  public static void resultado3(double a,double b,double resultado){
-   System.out.println("El resultado de la operacion ("+a+"*"+b+")/2 es " + resultado);   
-  }
-  public static void Salida(){
-   System.out.println("Lo sentimos, la operacion no puede llevarse a cabo");   
-  }
 }
