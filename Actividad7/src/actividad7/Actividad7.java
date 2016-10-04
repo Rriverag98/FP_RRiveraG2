@@ -50,45 +50,29 @@ public class Actividad7 {
         float area = 0; //Si no tiene el "= 0" ,Dice que no se inicializa la variable
         switch (op){
         case 1:
-            area=areaCuadrado();
-            return area;
-        case 2:
-            area=areaCirculo();
-            return area;
-        case 3:
-            area=areaTriangulo();
-            return area;
-        default:
-            mensajeSalida();          
-    } 
-    return area;
-  }
-    //Calculos
-  public static float areaCuadrado(){
       float datos;
       double a;
       a=SolicitarMedidas("A");
       datos = (float)Math.pow(a,2);
       return datos;
-  }
-   public static float areaCirculo(){
-      float datos;
-      double a;
+      
+        case 2:
       final double Pi=3.14;
       a=SolicitarMedidas("A");
       datos = (float) (Pi*Math.pow(a,2));
       return datos; 
-  }
-    public static float areaTriangulo(){
-      float datos;
-      double a,b;
+        
+        case 3:
+      double b;
       a=SolicitarMedidas("A");
       b=SolicitarMedidas("B");
       datos = (float)(a*b)/2;
       return datos;
-  }   
-    public static void mensajeSalida(){
+        
+        default:
       System.out.println("Gracias, esperamos que te sirviera el programa");
-      System.exit(0);
-}
+      System.exit(0);          
+    } 
+    return area;
+  }
 }
