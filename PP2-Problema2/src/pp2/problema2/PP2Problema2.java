@@ -30,13 +30,13 @@ public class PP2Problema2 {
     dato = teclado.nextInt();
     return dato;    
     }
-    public static double calcular1(int medida){
+    public static double calcular1(int medida){//convertir metros a pies
     return (medida*3.28084);    
     }
-    public static double calcular2(int medida){
+    public static double calcular2(int medida){//convertir metros a yardas
     return (medida*1.09361); 
     }
-    public static double calcular3(int medida){
+    public static double calcular3(int medida){//convertir metros a millas
     return (medida*0.000621371); 
     }
     public static void mostrarresultado(int medida,double resultado1,double resultado2,double resultado3){
