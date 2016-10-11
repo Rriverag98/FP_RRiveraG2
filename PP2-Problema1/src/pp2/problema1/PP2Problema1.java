@@ -20,15 +20,13 @@ public class PP2Problema1 {
     calcular(Anyo);
     }
     public static void calcular(int Anyo){ 
-    if ((Anyo%4)==0){
-    //AñoBisiesto();    
+    if ((Anyo%4)==0){//año dividido entre cuatro es entero
     } else {AnyoNormal();
     }
-    if ((Anyo%100)==0){
-     //AñoNormal();   
+    if ((Anyo%100)==0){ //año dividido entre cien es entero
     } else {AnyoBisiesto();
     }
-    if ((Anyo%400)==0){
+    if ((Anyo%400)==0){//año dividido entre cuatrocientos es entero
       AnyoBisiesto();   
     } else {AnyoNormal();  
     }
