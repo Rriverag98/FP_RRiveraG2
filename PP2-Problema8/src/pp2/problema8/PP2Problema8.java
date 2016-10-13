@@ -27,7 +27,7 @@ public class PP2Problema8 {
     }
     public static int catetos(String d) {
     int medida;
-    System.out.print("Ingresa el dato " + d +" : " ); //pedir numero entero ya que de lo contrariio crashea el programs
+    System.out.print("Ingresa el dato " + d +" : " ); //pedir catetos
     Scanner teclado = new Scanner(System.in);
     medida=teclado.nextInt();
     return medida;
