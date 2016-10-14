@@ -22,6 +22,7 @@ public class PP2Problema9 {
      cad=var.toCharArray();
          System.out.println(cad[0]+"000 + "+cad[1]+"00 + "+cad[2]+"0 + "+cad[3]+" = "+numero);  
     }
+    //pedir numero
      public static String digitos() {
      String n;
      System.out.print("Ingresa un numero de 4 digitos: " ); 
