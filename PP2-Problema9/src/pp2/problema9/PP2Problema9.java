@@ -20,7 +20,9 @@ public class PP2Problema9 {
      String var = (numero);
       char cad[];
      cad=var.toCharArray();
-         System.out.println(cad[0]+"000 + "+cad[1]+"00 + "+cad[2]+"0 + "+cad[3]+" = "+numero);  
+     for (int i=0;i<cad.length;i++){
+         System.out.println(cad[i]*cad[i]);
+     }
     }
     //pedir numero
      public static String digitos() {
@@ -29,11 +31,22 @@ public class PP2Problema9 {
     Scanner teclado = new Scanner(System.in);
     n=teclado.nextLine();
     //Si el numero tiene mas de 4 digitos mandar error y pedir otra vez el numero
-    while (n.length() > 4){
+    while (n.length()>4){
             System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
+            if (n.length()<4){ System.out.println("Error: El numero no es valido ");
+            System.out.print("Ingresa un numero de 4 digitos: " );
+            n=teclado.nextLine();
+       } 
+    }while (n.length()<4){
+            System.out.println("Error: El numero no es valido ");
+            System.out.print("Ingresa un numero de 4 digitos: " );
+            n=teclado.nextLine();
+            if (n.length()>4){ System.out.println("Error: El numero no es valido ");
+            System.out.print("Ingresa un numero de 4 digitos: " );
+            n=teclado.nextLine();
     }
-    return n;
-     }
+}return n;
+}
 }
