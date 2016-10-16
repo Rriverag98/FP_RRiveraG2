@@ -23,7 +23,7 @@ public class PP2Problema9 {
           System.out.println(cad[0]+"000 + "+cad[1]+"00 + "+cad[2]+"0 + "+cad[3]+" = "+numero);
      
     }
-    //pedir numero
+    //pedir un numero de 4 digitos, si es mayor o menor de manda error y pide el numero de nuevo hasta que se introdusca un numero de 4 digitos
      public static String digitos() {
      String n;
      System.out.print("Ingresa un numero de 4 digitos: " ); 
@@ -34,6 +34,7 @@ public class PP2Problema9 {
             System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
+            //Si el numero es menor a 4 digitos mandar error y pedir otra vex el numero
             while (n.length()<4){ System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
@@ -43,6 +44,7 @@ public class PP2Problema9 {
             System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
+            // si el numero es mayor a 4 mandar error y pedir otra vez el numerol
             while (n.length()>4){ System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
