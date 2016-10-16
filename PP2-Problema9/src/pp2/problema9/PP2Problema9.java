@@ -37,7 +37,8 @@ public class PP2Problema9 {
             if (n.length()<4){ System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
             n=teclado.nextLine();
-       } 
+       }
+    //Si el numero tiene menos de 4 digitos mandar error y pedir otra vez el numero
     }while (n.length()<4){
             System.out.println("Error: El numero no es valido ");
             System.out.print("Ingresa un numero de 4 digitos: " );
