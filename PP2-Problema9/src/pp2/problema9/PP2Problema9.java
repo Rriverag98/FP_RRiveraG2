@@ -20,7 +20,6 @@ public class PP2Problema9 {
      String var = (numero);
       char cad[];
      cad=var.toCharArray();
-     //for (int i=0;i<cad.length;i++){
           System.out.println(cad[0]+"000 + "+cad[1]+"00 + "+cad[2]+"0 + "+cad[3]+" = "+numero);
      
     }
