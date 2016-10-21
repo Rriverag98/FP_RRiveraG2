@@ -32,10 +32,10 @@ public class PP2Problema8 {
     medida=teclado.nextInt();
     return medida;
     }  
-    public static double calcular1(int dato1,int dato2){
+    public static double calcular1(int dato1,int dato2){//Calcular a^2 + b^2 
     return (Math.pow(dato1,2)+Math.pow(dato2,2));    
     }
-    public static double calcular2(double calcular1){
+    public static double calcular2(double calcular1){//Calcular raiz de a^2 + b^2  
     return (Math.sqrt(calcular1));
     }
     public static void mostrarresultado(double hipotenusa){
