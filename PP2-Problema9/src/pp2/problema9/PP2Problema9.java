@@ -22,14 +22,14 @@ public class PP2Problema9 {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Ingrese un numero entre el 0 y el 4000: ");
         int num=entrada.nextInt();
-        while(num<=0||num>=4000){
+        while(num<=0||num>=4000){ //Si el numero no esta entre el 0 y 4000 pide numero hasta que si lo este
             num = Numero();
         }
         return num;
     }
     public static void Convertir(int num){
-        for(int i=10;i<num*10;i=i*10){
-            System.out.print(((num%i)/(i/10))*(i/10));
+        for(int i=10;i<num*10;i=i*10){ //Revisa con multiplos de 10
+            System.out.print(((num%i)/(i/10))*(i/10));//imprime el digito en i
             if ((i<num))System.out.print(" + ");
         }
         System.out.print(" = "+num + " ");
