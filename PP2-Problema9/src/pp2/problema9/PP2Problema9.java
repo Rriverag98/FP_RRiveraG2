@@ -10,45 +10,28 @@ import java.util.*;
  * @author Rodrigo
  */
 public class PP2Problema9 {
-
-    /**
+/**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-    String numero;
-     numero = digitos();
-     String var = (numero);
-      char cad[];
-     cad=var.toCharArray();
-          System.out.println(cad[0]+"000 + "+cad[1]+"00 + "+cad[2]+"0 + "+cad[3]+" = "+numero);
-     
+   public static void main(String[] args) {
+        int num;
+        num=Numero();
+        Convertir(num);
     }
-    //pedir un numero de 4 digitos, si es mayor o menor de manda error y pide el numero de nuevo hasta que se introdusca un numero de 4 digitos
-     public static String digitos() {
-     String n;
-     System.out.print("Ingresa un numero de 4 digitos: " ); 
-    Scanner teclado = new Scanner(System.in);
-    n=teclado.nextLine();
-    //Si el numero tiene mas de 4 digitos mandar error y pedir otra vez el numero
-    while (n.length()>4){
-            System.out.println("Error: El numero no es valido ");
-            System.out.print("Ingresa un numero de 4 digitos: " );
-            n=teclado.nextLine();
-            //Si el numero es menor a 4 digitos mandar error y pedir otra vex el numero
-            while (n.length()<4){ System.out.println("Error: El numero no es valido ");
-            System.out.print("Ingresa un numero de 4 digitos: " );
-            n=teclado.nextLine();
-       }
-    //Si el numero tiene menos de 4 digitos mandar error y pedir otra vez el numero
-    }while (n.length()<4){
-            System.out.println("Error: El numero no es valido ");
-            System.out.print("Ingresa un numero de 4 digitos: " );
-            n=teclado.nextLine();
-            // si el numero es mayor a 4 mandar error y pedir otra vez el numerol
-            while (n.length()>4){ System.out.println("Error: El numero no es valido ");
-            System.out.print("Ingresa un numero de 4 digitos: " );
-            n=teclado.nextLine();
+    public static int Numero(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese un numero entre el 0 y el 4000: ");
+        int num=entrada.nextInt();
+        while(num<=0||num>=4000){
+            num = Numero();
+        }
+        return num;
     }
-}return n;
-}
-}
+    public static void Convertir(int num){
+        for(int i=10;i<num*10;i=i*10){
+            System.out.print(((num%i)/(i/10))*(i/10));
+            if ((i<num))System.out.print(" + ");
+        }
+        System.out.print(" = "+num + " ");
+    } 
+    }
