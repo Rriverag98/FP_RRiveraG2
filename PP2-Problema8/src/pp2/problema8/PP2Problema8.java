@@ -19,13 +19,13 @@ public class PP2Problema8 {
     public static void main(String[] args) {
     int A,B;
     double resultado,hipotenusa;
-    A=catetos("A");
-    B=catetos("B");
+    A=cateto("A");
+    B=cateto("B");
     resultado=calcular1(A,B);
     hipotenusa=calcular2(resultado);
     mostrarresultado(hipotenusa);
     }
-    public static int catetos(String d) {
+    public static int cateto(String d) {
     int medida;
     System.out.print("Ingresa el dato " + d +" : " ); //pedir catetos
     Scanner teclado = new Scanner(System.in);
