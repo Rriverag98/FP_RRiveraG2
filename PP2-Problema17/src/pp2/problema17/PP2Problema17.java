@@ -30,16 +30,15 @@ public class PP2Problema17 {
     return  n;
     }
     public static int calcular(int a,int b){    
-    int n = a,c;
-        if (b<n){ //se busca el menor de los 2 numeros
+    int n = a,c = 0;
+        if (b<n) //se busca el menor de los 2 numeros
             n=b;
             for (int i=1;i<=n;i++){ //se buscan los numeros que pueden dividir a los 2 numeros sin dejar remainders 
                 if (a%i==0&&b%i==0){ //pasa cuando el resultado de los 2 numeros mod i es 0
                     c = i; //guarda el ultimo valor de i antes de detenerse el for
                 } 
-            } 
-        } return n;
-    }
+            } return c;
+        } 
 public static void resultado (int c){
     System.out.println("El máximo comun divisor es: "+c);
 }  
