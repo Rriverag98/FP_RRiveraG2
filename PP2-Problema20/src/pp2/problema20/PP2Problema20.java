@@ -31,10 +31,10 @@ public class PP2Problema20 {
      int r=1;
         for(int i=2;i<a;i++){
             if(a%i==0){
-                r=r+i;
+                r=r+i; //revisa cuales  son los factores de los numeros
             }
         }
-        if(r==b){
+        if(r==b){ //si la suma  de los digitos del primer numero es igual a el segundo numero, es amigo, en caso contrario, no lo es.
             System.out.println("El numero "+a+" es amigo de "+b+".");
         } else {
             System.out.println("El numero "+a+" no es amigo de "+b+".");
