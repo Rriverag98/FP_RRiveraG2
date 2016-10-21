@@ -26,13 +26,13 @@ public class PP2Problema19 {
     }
     public static int Angulo() {
     int medida;
-    System.out.print("Ingresa el angulo: " ); //pedir catetos
+    System.out.print("Ingresa el angulo: " ); //pedir Angulo
     Scanner teclado = new Scanner(System.in);
     medida=teclado.nextInt();
     return medida;
     }  
     public static double calcular1(double Ang){
-    double a = Math.toRadians(Ang);
+    double a = Math.toRadians(Ang); //Por alguna razon usar to.Radians convierte los radianes al numero normal
         return Math.sin(a);    
     }
     public static double calcular2(double Ang){
