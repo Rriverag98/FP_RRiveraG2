@@ -25,7 +25,7 @@ public class PP2Problema4 {
     }
     public static int metros(){
     int dato;
-    System.out.println("Introduce la medida en metros: ");
+    System.out.println("Introduce la medida en centigrados: ");
     Scanner teclado=new Scanner(System.in);
     dato = teclado.nextInt();
     return dato;    
