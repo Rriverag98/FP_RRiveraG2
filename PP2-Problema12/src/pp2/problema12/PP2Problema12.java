@@ -11,13 +11,13 @@ import java.util.*;
  */
 public class PP2Problema12 {
 public static void main(String[] args) {
-        int [] n = new int [10];
+        int [] n = new int [10]; //pedir un numero 10 veces
         n=pedirnumeros(n);
         Muestranumeros(n);
     }
     public static int [] pedirnumeros(int [] n){
  Scanner teclado = new Scanner(System.in);
- for (int i=0;i<n.length;i++){
+ for (int i=0;i<n.length;i++){ //Se pide un numero para cada pocision
  System.out.print("Ingresa el numero en la pocision: " + (i+1) + " " ); 
     n [i]=teclado.nextInt();
     } return  n;
@@ -25,10 +25,10 @@ public static void main(String[] args) {
     public static void Muestranumeros(int[] n){
            int a=0,p=0;
         for (int i=1; i<n.length; i=i+1){
-            a=n[i]+a;
+            a=n[i]+a; //se Suman los numeros
             p++;
         }
-        System.out.println("La media de los numeros introducidos es: "+ a/p);
+        System.out.println("La media de los numeros introducidos es: "+ a/p); //se muestra la media de los numeros
     }
 }
  
