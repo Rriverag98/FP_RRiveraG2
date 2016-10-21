@@ -33,11 +33,9 @@ public class PP2Problema6 {
     public static double calcular1(int horas){
     if (horas>40&&horas<48){
     return (((horas-40)*18.25)+40*9.125);    
-    } else {
-    }
+    } 
     if (horas>48){
     return (((horas-48)*27.375)+8*18.25+40*9.125);        
-    } else{
     }
     return (horas*9.125);
     }
