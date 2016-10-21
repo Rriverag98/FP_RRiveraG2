@@ -17,7 +17,8 @@ public class PP2Problema13 {
      */
     public static void main(String[] args) {
         int r;
-        int [] n = new int [30];
+        int [] n = new int [30]; //pedir un numero 30 veces
+
         n=pedirnumeros(n);
         r=promedio(n);
         narribadep(n,r);
@@ -32,20 +33,20 @@ public class PP2Problema13 {
     public static int promedio(int[] n){
         int a=0,p=0;
         for (int i=1; i<n.length; i++){
-            a=n[i]+a;
+            a=n[i]+a; //se Suman los numeros
             p++;
             
         }
          System.out.println("El promedio de los numeros introducidos es: "+ a/p);
-         int c=a/p;
+         int c=a/p; //se calcula el promedio de los numeros
          return c;
          }
     public static void narribadep(int [] n, int r){
         int d=0, e=0;
         for (int i=0;i<n.length;i++){
-        if (n[i]>r){
+        if (n[i]>r){ //Si el numero es mayor al promedio se incrementa d
         d++;}
-        if (n[i]<r){
+        if (n[i]<r){ //Si el numero es menor al promedio se incrementa e
         e++;}
         }System.out.println("La cantidad de numeros arriba del promedio es: " +d);
             System.out.println("La cantidad de numeros abajo del promedio es: "+e);
