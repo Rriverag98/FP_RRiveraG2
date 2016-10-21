@@ -30,13 +30,13 @@ public class PP2Problema16 {
     return  n;
     }
     public static void resultado(int n,int a,int b){
-        if (b<n&&a<n){
+        if (b<n&&a<n){ // revisa si n es mas grande que b y c
             System.out.println("El numero mas grande es: "+n);
         }
-         if (b<a&&n<a){
+         if (b<a&&n<a){ //revisa si a es mas grande que n y b
             System.out.println("El numero mas grande es: "+a);
         }
-          if (n<b&&a<b){
+          if (n<b&&a<b){//revisa si b es mas grande que n y a
             System.out.println("El numero mas grande es: "+b);
         }
          }
