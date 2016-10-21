@@ -21,9 +21,9 @@ public class PP2Problema11 {
     }
     public static int Numero(){
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Ingrese un numero entre el 0 y el 4000: ");
+        System.out.print("Ingrese un numero entre el 0 y el 4000: "); //No hay signo disponible para el numero 4000
         int num=entrada.nextInt();
-        while(num<=0||num>=4000){
+        while(num<=0||num>=4000){//Si el numero es menor a 0 o mayor a 4000 pide numero hasta que no lo sea
             num = Numero();
         }
         return num;
@@ -32,18 +32,18 @@ public class PP2Problema11 {
         int a,p=0;
         String b="";
         String []array = new String[4];
-        for(int i=10;i<=num*10;i=i*10){
-            a = ((num%i)/(i/10))*(i/10);
+        for(int i=10;i<=num*10;i=i*10){ //Revisa con multiplos de 10
+            a = ((num%i)/(i/10))*(i/10); //toma el valor de num mod i
             if(a==0) b="";
             if(a>0&&a<10)b=unidades(a);
             if(a>9&&a<100) b=decenas(a);
             if(a>99&&a<1000) b=centenas(a);
             if(a>999&&a<10000) b=milares(a);
-            array[p]=b;
+            array[p]=b; //Agrega la letra a un arreglo
             p++;
         }
         System.out.print("El numero "+num+" es ");
-        for(int i=(array.length-1);i>=0;i--){
+        for(int i=(array.length-1);i>=0;i--){ //muestra el arreglo en el orden correcto
             if (array[i]==null){System.out.print("");
                     } else{
                 System.out.print(array[i]);
