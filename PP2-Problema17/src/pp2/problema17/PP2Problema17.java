@@ -31,11 +31,11 @@ public class PP2Problema17 {
     }
     public static int calcular(int a,int b){    
     int n = a,c;
-        if (b<n){
+        if (b<n){ //se busca el menor de los 2 numeros
             n=b;
-            for (int i=1;i<=n;i++){
-                if (a%i==0&&b%i==0){
-                    c = i;
+            for (int i=1;i<=n;i++){ //se buscan los numeros que pueden dividir a los 2 numeros sin dejar remainders 
+                if (a%i==0&&b%i==0){ //pasa cuando el resultado de los 2 numeros mod i es 0
+                    c = i; //guarda el ultimo valor de i antes de detenerse el for
                 } 
             } 
         } return n;
