@@ -22,12 +22,12 @@ public class PP2Problema5 {
     resultado(primo(numero),numero);
     }
    public static boolean primo(int numero){
-    if (numero%2==0) return false;
-    for(int i=3;i*i<=numero;i+=2) {
-    if(numero%i==0)
+    if (numero%2==0) return false; //Si el numero mod 2 no es 0 entonces no es numero primo
+    for(int i=3;i*i<=numero;i+=2) { //Incrementar i por 2 hasta que el numero sea igual o menor a i*i
+    if(numero%i==0) //Si el numero mod i no es 0 entonces no es numero primo
     return false;
     }
-    return true;
+    return true;//Si no pasa por ninguna de las condiciones anteriores entonces es primo
     }
     public static int digito(){
     System.out.println("Introduce el numero: ");
